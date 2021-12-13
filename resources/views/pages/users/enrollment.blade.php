@@ -14,7 +14,7 @@
                 <div class="row">
                 <h1 class="mt-3 enrollment-title">Enrollment Page</h1>
                 <p class="enrollment-desc">New Enrollment</p>
-                <hr>
+                {{ Breadcrumbs::render('enrollment') }}
                     <div class="col-md-12">
                         {!! Form::open(["route" => "user.enrollment.post", 'method' => 'post', 'id' => 'enrollment-form',  'enctype'=>"multipart/form-data"]) !!}
                         @include('items.enrollment-form')
@@ -26,7 +26,13 @@
             </div>
         </div>
     </div>
-
+    <style>
+        .breadcrumb-item + .breadcrumb-item::before {
+        content: ">";
+        color: green;
+        
+    }
+    </style>
     <script>
         let btn = document.querySelector("#btn-menu");
         let sidebar = document.querySelector(".sidebar");

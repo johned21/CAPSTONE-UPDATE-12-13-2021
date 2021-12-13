@@ -2,7 +2,7 @@
     <div class="col-md-12">
 
         <h1 class="mt-4" style="color: green;">Dashboard</h1>
-
+        {{ Breadcrumbs::render('home') }}
         <div class="card mt-3">
             <div class="card-header" style="height: auto;">
                 <div class="row">

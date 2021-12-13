@@ -1,12 +1,4 @@
-<a href="/">Home</a> >                
-<?php $link = "" ?>
-@for($i = 1; $i <= count(Request::segments()); $i++)
-    @if($i < count(Request::segments()) & $i > 0)
-    <?php $link .= "/" . Request::segment($i); ?>
-    <a href="<?= $link ?>">{{ ucwords(str_replace('-',' ',Request::segment($i)))}}</a> >
-    @else {{ucwords(str_replace('-',' ',Request::segment($i)))}}
-    @endif
-@endfor
+
 <div class="card mb-5 mt-5" id="cardss">
     <div class="card-header" style="height:65px;">
         <h1><i class="fas fa-key"></i> Change Password</h1>
